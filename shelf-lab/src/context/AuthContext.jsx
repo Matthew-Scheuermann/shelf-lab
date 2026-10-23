@@ -13,7 +13,7 @@ export function AuthProvider({ children }) {
       body: JSON.stringify({ username, password }),
     });
     const result = await response.json();
-    if (!result.ok) throw new Error(result.message || "Login failed");
+    if (!response.ok) throw new Error(result.message || "Login failed");
     setToken(result.accessToken);
   }
 
