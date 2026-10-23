@@ -20,7 +20,8 @@ export default function App() {
       <ul>
         {books.map((book) => (
           <li key={book.key}>
-            {book.title} by {book.author_name?.join(", ")}
+            <span>{book.title}</span>
+            <span>{book.author_name?.join(", ")}</span>
           </li>
         ))}
       </ul>
