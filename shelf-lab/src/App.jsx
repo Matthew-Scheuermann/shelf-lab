@@ -1,6 +1,7 @@
 import { useBooks } from "./hooks/useBooks";
 import { useAuth } from "./context/AuthContext";
 import LoginForm from "./components/LoginForm";
+import WhoAmI from "./components/WhoAmI";
 
 export default function App() {
   const { books, loading, error } = useBooks();
@@ -15,6 +16,7 @@ export default function App() {
     <section>
       <h1>Book Shelf</h1>
       <button onClick={logout}>Log out</button>
+      <WhoAmI />
       <ul>
         {books.map((book) => (
           <li key={book.key}>
